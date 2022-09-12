@@ -1,0 +1,46 @@
+.header {
+    margin-top: 3rem;
+}
+
+.brandwrap {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-items:center;
+    padding-bottom:0.85rem;
+    border-bottom:2.6px solid #00ee01;
+}
+
+.brandwrap a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    letter-spacing: -0.1595rem;
+    word-spacing: -0.35rem;
+    font-size: 1.45rem;
+}
+
+
+.headercontrols {
+    display:flex;
+    margin-left:auto;
+    align-items:center;
+}
+
+.headercontrols a {
+    font-size:0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    color: #454647;
+    text-transform:uppercase;
+    letter-spacing:0.06rem;
+    word-spacing:0;
+}
+
+.headercontrols button {
+    background-color:#000;
+    color:#00ee01;
+    padding: 0.5rem 1rem;
+    margin-left:0.8rem;
+    text-transform:uppercase;
+    border:none;
+}

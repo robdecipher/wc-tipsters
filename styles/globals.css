@@ -32,6 +32,21 @@ button {
   font-weight:600;
 }
 
+.navigation {
+  display:flex;
+  margin-top:1rem;
+  position:absolute;
+  top:6rem;
+  right:0.75rem;
+  bottom:3rem;
+  left:0.75rem;
+  background-color:#f6f6f6;
+}
+
+.navclosed {
+  display:none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

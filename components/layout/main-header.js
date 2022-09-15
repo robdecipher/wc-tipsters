@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import Link from 'next/link';
 
 import classes from './main-header.module.css';
 
 function MainHeader() {
+
+    const [isNavExpanded, setIsNavExpanded] = useState(false);
 
     return(
         <header className={classes.header}>
@@ -10,10 +13,14 @@ function MainHeader() {
                 <Link href='/' className={classes.brand}>World Cup Tipsters</Link>
                 <div className={classes.headercontrols}>
                     <Link href='/'>Login</Link>
-                    <button>MENU</button>
+                    <button className={classes.menutoggle} onClick={
+                        () => {
+                            setIsNavExpanded(!isNavExpanded);
+                        }
+                    }>{isNavExpanded ? 'CLOSE' : 'MENU'}</button>
                 </div>
             </div>
-            <nav className={classes.navigation}>
+            <nav className={isNavExpanded ? 'navigation' : 'navclosed'}>
                 <ul>
                     <li>
                         <Link href='/'>Live Table</Link>

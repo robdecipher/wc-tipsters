@@ -1,5 +1,6 @@
 .header {
-    margin-top: 3rem;
+    margin-top:3rem;
+    margin-bottom:0.75rem;
 }
 
 .brandwrap {
@@ -36,6 +37,11 @@
     word-spacing:0;
 }
 
+.headercontrols a:hover {
+    color:#00ee01;
+    font-weight:600;
+}
+
 .headercontrols .menutoggle {
     background-color:#000;
     color:#00ee01;
@@ -44,4 +50,13 @@
     text-transform:uppercase;
     border:none;
     min-width:5rem;
+}
+
+@media screen and (min-width:768px) {
+    .menutoggle {
+        display:none;
+    }
+    .headercontrols a {
+        margin-left:1.2rem;
+    }
 }

@@ -2,12 +2,16 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  margin: 0 0.75rem;
+  margin: 0 auto;
+  max-width:1440px;
+}
+
+header, main, footer {
+  margin:0 0.75rem;
 }
 
 a {
@@ -27,12 +31,24 @@ h1 {
   font-size: 1.45rem;
 }
 
+ul {
+  padding:0;
+}
+
+li {
+  list-style-type:none;
+}
+
 button {
   font-family: 'Poppins', sans-serif;
   font-weight:600;
 }
 
-.navigation {
+.max-wrap {
+  margin: 0 auto;
+}
+
+.navigation.expanded {
   display:flex;
   margin-top:1rem;
   position:absolute;
@@ -43,11 +59,28 @@ button {
   background-color:#f6f6f6;
 }
 
-.navclosed {
+.navigation {
   display:none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (min-width:768px) {
+  .navigation {
+    display:flex;
+    flex-direction:row;
+    background-color:#f6f6f6;
+  }
+  .navigation ul {
+    margin:0;
+    padding:0.75rem 0.5rem;
+  }
+  .navigation ul li {
+    display:inline;
+    margin-right:2.4rem;
+
+  }
+}
+
+/*@media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -55,4 +88,4 @@ button {
     color: white;
     background: black;
   }
-}
+}*/

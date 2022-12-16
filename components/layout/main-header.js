@@ -9,27 +9,36 @@ function MainHeader() {
 
     return(
         <header className={classes.header}>
-            <div className={classes.brandwrap}>
-                <Link href='/' className={classes.brand}>World Cup Tipsters</Link>
-                <div className={classes.headercontrols}>
-                    <Link href='/'>Login</Link>
-                    <button className={classes.menutoggle} onClick={
-                        () => {
-                            setIsNavExpanded(!isNavExpanded);
-                        }
-                    }>{isNavExpanded ? 'CLOSE' : 'MENU'}</button>
+            <div className={'max-wrap'}>
+                <div className={classes.brandwrap}>
+                    <Link href='/' className={classes.brand}>World Cup Tipsters</Link>
+                    <div className={classes.headercontrols}>
+                        <Link href='/'>Login</Link>
+                        <Link href='/'>Sign Up</Link>
+                        <button className={classes.menutoggle} onClick={
+                            () => {
+                                setIsNavExpanded(!isNavExpanded);
+                            }
+                        }>{isNavExpanded ? 'CLOSE' : 'MENU'}</button>
+                    </div>
                 </div>
+                <nav className={isNavExpanded ? 'navigation expanded' : 'navigation'}>
+                    <ul>
+                        <li>
+                            <Link href='/'>Live Table</Link>
+                        </li>
+                        <li>
+                            <Link href='/'>Predictions</Link>
+                        </li>
+                        <li>
+                            <Link href='/'>Results</Link>
+                        </li>
+                        <li>
+                            <Link href='/'>Video</Link>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav className={isNavExpanded ? 'navigation' : 'navclosed'}>
-                <ul>
-                    <li>
-                        <Link href='/'>Live Table</Link>
-                    </li>
-                    <li>
-                        <Link href='/'>Matches</Link>
-                    </li>
-                </ul>
-            </nav>
         </header>
     );
 
